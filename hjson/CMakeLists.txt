@@ -25,8 +25,11 @@
 #         )
 # install(FILES ${HEADERS} DESTINATION include)
 
-# 创建接口库而不是静态库
+# 创建接口库（Header-Only库）
 add_library(hjson INTERFACE)
+
+# 设置C++标准要求
+target_compile_features(hjson INTERFACE cxx_std_17)
 
 # 设置头文件目录
 target_include_directories(hjson INTERFACE
