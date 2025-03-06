@@ -1,8 +1,6 @@
 #ifndef TJSON_DOCUMENT_H
 #define TJSON_DOCUMENT_H
 
-#include <string>
-
 #include <hjson/Value.h>
 #include <hjson/Reader.h>
 #include <hjson/StringReadStream.h>
