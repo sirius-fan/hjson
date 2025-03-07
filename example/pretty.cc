@@ -18,4 +18,6 @@ int main()
     FileWriteStream os(stdout);
     PrettyWriter writer(os);
     document.writeTo(writer);
+    
+    return 0;
 }
