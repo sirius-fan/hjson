@@ -274,6 +274,20 @@ ctest --output-on-failure
 - ✅ 错误处理测试
 - ✅ 往返测试 (parse → generate → parse)
 
+```
+🧪 运行测试...
+Test project /home/sirius/Desktop/新建文件夹/new/hjson/build
+    Start 1: test_error
+1/3 Test #1: test_error .......................   Passed    0.00 sec
+    Start 2: test_value
+2/3 Test #2: test_value .......................   Passed    0.00 sec
+    Start 3: test_roundtrip
+3/3 Test #3: test_roundtrip ...................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 3
+```
+
+
 ## 📊 性能基准
 
 运行性能基准测试：
@@ -292,6 +306,23 @@ make perf
 |------|------|---------------|--------|
 | canada.json | 2.2MB | ~40ms | ~55MB/s |
 | citm_catalog.json | 1.7MB | ~5ms | ~340MB/s |
+
+```
+Run on (16 X 5102.71 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x8)
+  L1 Instruction 32 KiB (x8)
+  L2 Unified 1024 KiB (x8)
+  L3 Unified 16384 KiB (x1)
+Load Average: 1.34, 0.89, 0.81
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+--------------------------------------------------------------------------
+Benchmark                                Time             CPU   Iterations
+--------------------------------------------------------------------------
+BM_read_parse_write/many_double       36.5 ms         36.4 ms           38
+BM_read_parse_write/simple            4.58 ms         4.56 ms          308
+```
+
 
 ### 与其他库对比
 
